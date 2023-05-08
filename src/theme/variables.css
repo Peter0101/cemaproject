@@ -74,9 +74,13 @@ http://ionicframework.com/docs/theming/ */
   --ion-color-light-contrast-rgb: 0, 0, 0;
   --ion-color-light-shade: #d7d8da;
   --ion-color-light-tint: #f5f6f9;
+
+  /* Brand Colors */
+  --brand-color-main: #26348b;
+  --brand-color-secondary: #82d0f5;
 }
 
-@media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: light) { /* tema do app
   /*
    * Dark Colors
    * -------------------------------------------
@@ -141,10 +145,14 @@ http://ionicframework.com/docs/theming/ */
 
     --ion-color-light: #222428;
     --ion-color-light-rgb: 34,36,40;
-    --ion-color-light-contrast: #ffffff;
+    --ion-color-light-contrast: #ffffff
     --ion-color-light-contrast-rgb: 255,255,255;
     --ion-color-light-shade: #1e2023;
     --ion-color-light-tint: #383a3e;
+
+    /* Brand Colors */
+    --brand-color-main: #26348b;
+    --brand-color-secondary: #82d0f5;
   }
 
   /*
@@ -182,6 +190,10 @@ http://ionicframework.com/docs/theming/ */
     --ion-item-background: #000000;
 
     --ion-card-background: #1c1c1d;
+
+    /* Brand Colors */
+    --brand-color-main: #26348b;
+    --brand-color-secondary: #82d0f5;
   }
 
   .ios ion-modal {
@@ -232,5 +244,9 @@ http://ionicframework.com/docs/theming/ */
     --ion-tab-bar-background: #1f1f1f;
 
     --ion-card-background: #1e1e1e;
+
+    /* Brand Colors */
+    --brand-color-main: #26348b;
+    --brand-color-secondary: #82d0f5;
   }
 }

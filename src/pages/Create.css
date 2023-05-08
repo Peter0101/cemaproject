@@ -1,0 +1,32 @@
+.title {
+    color: var(--brand-color-main)
+}
+
+.textAreaBox {
+    background-color: rgb(233, 232, 232);
+    box-shadow: #2020d8 0 10px 20px -10px;
+    border-radius: 2vw;
+}
+
+.textArea {
+    height: 40vh;
+    width: 90vw;
+}
+
+.tituloterciario {
+    font-size: 10px;
+    padding-left: 21px;
+    padding-right: 20px;
+}
+
+.privateChoiceBox {
+    width: 90vw;
+}
+
+.sendButton {
+    width: 40vw;
+    --background: linear-gradient(92.04deg, #4d5bdb 0%, var(--brand-color-main) 100%);
+    --border-radius: 2vw;
+    --box-shadow: #2020d8 0 10px 20px -10px;
+}
+

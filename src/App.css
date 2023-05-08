@@ -1,0 +1,8 @@
+.tabbar {
+    --background: var(--brand-color-main);
+    overflow: visible;
+}
+
+ion-icon {
+    color: white;
+}

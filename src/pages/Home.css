@@ -1,0 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap');
+
+* {
+    font-family: 'Inter', sans-serif !important;
+}
+IonLabel .titulosecundario {
+ --color: #6D6D6D;
+}
+IonLabel .titulo {
+    --color: #1E1E1E;
+}

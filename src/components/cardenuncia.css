@@ -1,0 +1,25 @@
+.header {
+    padding: 5% 5% 0 5%;
+}
+
+.StatusDenuncia {
+    --color: #44d368;
+    margin-top: -1px;
+    font-size: 15px;
+}
+
+.borda {
+    border-Bottom: 0.2vh solid rgb(0, 0, 0);
+    padding-bottom: 1vh;
+    margin-Left: -1vw; 
+    margin-Right: -1vw;
+}
+
+.datadenuncia {
+    padding-left: 75%;
+}
+
+.complaintDescription {
+    max-width: 50%;
+    font-size: small;
+}
