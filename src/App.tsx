@@ -14,6 +14,7 @@ import { notifications, alarm, home, warning, person, alertCircle } from 'ionico
 import Home from './pages/Home';
 import Create from './pages/Create';
 import History from './pages/History';
+import Notifications from './pages/Notifications'
 
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/react/css/core.css';
@@ -52,6 +53,9 @@ const App: React.FC = () => (
           <Route exact path="/create">
             <Create />
           </Route>
+          <Route exact path="/notifications">
+            <Notifications />
+          </Route>
           <Route exact path="/">
             <Redirect to="/home" />
           </Route>
@@ -70,7 +74,7 @@ const App: React.FC = () => (
             <IonIcon className="complaintIcon" aria-hidden="true" icon={alertCircle}/>
           </IonTabButton>
 
-          <IonTabButton tab="tab4" href="/tab3">
+          <IonTabButton tab="notifications" href="/notifications">
             <IonIcon aria-hidden="true" icon={notifications}/>
           </IonTabButton>
 

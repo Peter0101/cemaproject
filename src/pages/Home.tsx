@@ -21,24 +21,22 @@ const Tab1: React.FC = () => {
       
       <IonGrid>
         <IonRow>
-          <IonCard className='ion-margin'>
+          <IonCard className='newsCard ion-margin'>
             <img src="public/news/bullying.png" />
             <IonCardHeader>
             <IonCardSubtitle>#ÉDaMinhaContaSim</IonCardSubtitle>
               <IonCardTitle>Semana contra o Bullying</IonCardTitle>
-            
             </IonCardHeader>
           </IonCard>
         </IonRow>
       
       
 
-      <IonCard className='ion-margin'>
+      <IonCard className='newsCard ion-margin'>
         <img src="public/news/familia.png" />
         <IonCardHeader>
         <IonCardSubtitle>Conheça as medidas do nosso colégio</IonCardSubtitle>
           <IonCardTitle>Família, Escola e Comunidade</IonCardTitle>
-        
         </IonCardHeader>
       </IonCard>
 

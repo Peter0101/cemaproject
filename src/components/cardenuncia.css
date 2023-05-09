@@ -23,3 +23,17 @@
     max-width: 50%;
     font-size: small;
 }
+
+.seeButtonBox {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.seeButton {
+    color: black;
+}
+
+.seeButtonIcon {
+    color: black;
+}

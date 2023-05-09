@@ -9,3 +9,8 @@ IonLabel .titulosecundario {
 IonLabel .titulo {
     --color: #1E1E1E;
 }
+
+.newsCard {
+    background: linear-gradient(120deg, #fafafa 0%, #e9e8e8 100%);
+    box-shadow: #b8b8b8 0 10px 20px -10px;
+}

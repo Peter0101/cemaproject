@@ -1,6 +1,10 @@
 .tabbar {
-    --background: var(--brand-color-main);
+    --background: linear-gradient(140deg, #3d4ddf 10%, var(--brand-color-main) 100%);
     overflow: visible;
+}
+
+ion-tab-button {
+    --background: transparent;
 }
 
 ion-icon {

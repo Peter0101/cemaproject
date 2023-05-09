@@ -1,5 +1,6 @@
 import React from 'react';
-import { IonCard, IonGrid, IonCol, IonRow, IonCardContent, IonCardHeader, IonCardSubtitle, IonCardTitle, IonText, IonButton } from '@ionic/react'
+import { IonCard, IonGrid, IonCol, IonRow, IonCardContent, IonCardHeader, IonCardSubtitle, IonCardTitle, IonText, IonButton, IonIcon } from '@ionic/react'
+import { chevronUpOutline } from 'ionicons/icons'
 import './cardenuncia.css';
 
 
@@ -16,7 +17,7 @@ function cardenuncia(props: ContainerProps) {
         <IonCardTitle>Denúncia #{props.identificador}</IonCardTitle>
         <IonRow className="borda"/>
       </IonCardHeader>
-      <IonCardContent>
+      <IonCardContent className='ion-padding-horizontal'>
         <IonGrid className='ion-no-margin'>
           <IonRow>
           <IonCol className='ion-no-padding'>
@@ -27,12 +28,15 @@ function cardenuncia(props: ContainerProps) {
             <IonCardSubtitle className='ion-no-padding ion-float-right datadenuncia'>{props.data}</IonCardSubtitle>
           </IonCol>
           </IonRow>
-          <IonRow>
-            <IonCol>
+          <IonRow className='ion-padding-top'>
+            <IonCol className='ion-no-padding'>
               <IonText className='complaintDescription'>A sua denúncia foi enviada e logo entrará em análise</IonText>
             </IonCol>
-            <IonCol>
-              <IonButton>Ler denúncia</IonButton>
+            <IonCol className='seeButtonBox ion-no-padding'>
+              <IonButton fill='clear' size='small' className='seeButton ion-no-padding'>
+                <IonIcon slot='start' icon={chevronUpOutline} className='seeButtonIcon'/>
+                Ler denúncia
+                </IonButton>
             </IonCol>
           </IonRow>
         </IonGrid>

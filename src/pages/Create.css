@@ -3,8 +3,8 @@
 }
 
 .textAreaBox {
-    background-color: rgb(233, 232, 232);
-    box-shadow: #2020d8 0 10px 20px -10px;
+    background: linear-gradient(140deg, #fafafa 0%, #e9e8e8 100%);
+    box-shadow: #a5a5a5 0 10px 20px -10px;
     border-radius: 2vw;
 }
 
@@ -19,8 +19,15 @@
     padding-right: 20px;
 }
 
+.titulosecundario h6 {
+    margin-bottom: 0vh;
+}
+
 .privateChoiceBox {
     width: 90vw;
+    --background: linear-gradient(140deg, #fafafa 0%, #e9e8e8 100%);
+    border-radius: 2vw;
+    box-shadow: #a5a5a5 0 10px 20px -10px;
 }
 
 .sendButton {
