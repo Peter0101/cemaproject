@@ -15,6 +15,7 @@ import Home from './pages/Home';
 import Create from './pages/Create';
 import History from './pages/History';
 import Notifications from './pages/Notifications'
+import Login from './pages/Login'
 
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/react/css/core.css';
@@ -56,8 +57,11 @@ const App: React.FC = () => (
           <Route exact path="/notifications">
             <Notifications />
           </Route>
+          <Route exact path="/login">
+            <Login />
+          </Route>
           <Route exact path="/">
-            <Redirect to="/home" />
+            <Redirect to="/login" />
           </Route>
         </IonRouterOutlet>
         <IonTabBar slot="bottom" className='tabbar'>
