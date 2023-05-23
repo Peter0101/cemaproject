@@ -16,6 +16,7 @@ import Create from './pages/Create';
 import History from './pages/History';
 import Notifications from './pages/Notifications'
 import Login from './pages/Login'
+import Register from './pages/Register'
 
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/react/css/core.css';
@@ -59,6 +60,9 @@ const App: React.FC = () => (
           </Route>
           <Route exact path="/login">
             <Login />
+          </Route>
+          <Route exact path="/register">
+            <Register />
           </Route>
           <Route exact path="/">
             <Redirect to="/login" />

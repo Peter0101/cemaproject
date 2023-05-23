@@ -33,16 +33,29 @@ function cardenuncia(props: ContainerProps) {
               <IonText className='complaintDescription'>A sua denúncia foi enviada e logo entrará em análise</IonText>
             </IonCol>
             <IonCol className='seeButtonBox ion-no-padding'>
-              <IonButton fill='clear' size='small' className='seeButton ion-no-padding'>
+              <IonButton fill='clear' size='small' id="readdenuncia" className='seeButton ion-no-padding'>
                 <IonIcon slot='start' icon={chevronUpOutline} className='seeButtonIcon'/>
                 Ler denúncia
                 </IonButton>
+                
             </IonCol>
           </IonRow>
         </IonGrid>
       </IonCardContent>
     </IonCard>
+      
+
   )
 };
+
+/*
+<IonAlert
+      trigger="readdenuncia"
+      header="Alert"
+      subHeader="Important message"
+      message="This is an alert!"
+      buttons={['OK']}
+      ></IonAlert>
+*/
 
 export default cardenuncia;

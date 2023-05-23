@@ -1,0 +1,17 @@
+.title {
+    color: var(--brand-color-main);
+}
+
+.textAreaBox {
+    background: linear-gradient(140deg, #fafafa 0%, #e9e8e8 100%);
+    box-shadow: #a5a5a5 0px 10px 20px -10px;
+    border-radius: 2vw;
+}
+
+.textArea {
+    width: 90vw;
+}
+
+textarea {
+    padding-bottom: 0 !important;
+}

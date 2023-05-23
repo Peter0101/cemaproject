@@ -1,8 +1,27 @@
+// @ts-nocheck
+import {useEffect} from 'react'
+import {useHistory} from 'react-router-dom'
 import { IonContent, IonCard, IonLabel, IonCardHeader, IonCardSubtitle, IonCardTitle, IonHeader, IonPage, IonTitle, IonToolbar, IonGrid, IonRow, IonText } from '@ionic/react';
 import Header from '../components/Header';
 import './Home.css';
 
+import {connect} from '../Api.js'
+
 const Tab1: React.FC = () => {
+  const history = useHistory()
+
+  const user = JSON.parse(localStorage.getItem('user'))
+
+  useEffect(() => {
+    connect((done, err) => {
+      if(done) {
+        return
+      }
+      if(err) {
+        history.push('/login')
+      }
+    })
+  }, [])
   return (
     <IonPage>
       
@@ -12,7 +31,7 @@ const Tab1: React.FC = () => {
       <IonContent fullscreen>
       <IonGrid>
         <IonRow className='ion-justify-content-center ion-padding'>
-          <IonText className='titulo'><h1 className='ion-no-margin' style={{fontWeight: '500'}}>Bom dia, Luana!</h1></IonText>
+          <IonText className='titulo'><h1 className='ion-no-margin' style={{fontWeight: '500'}}>Bom dia, {user.user.details.name}!</h1></IonText>
         </IonRow>
         <IonRow className='ion-justify-content-center'>
         <IonText className='titulosecundario'><h5 className='ion-no-margin'>Últimas notícias</h5></IonText>
