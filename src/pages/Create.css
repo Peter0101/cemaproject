@@ -1,5 +1,5 @@
 .title {
-    color: var(--brand-color-main)
+    color: var(--brand-color-main);
 }
 
 .textAreaBox {
@@ -35,5 +35,9 @@
     --background: linear-gradient(92.04deg, #4d5bdb 0%, var(--brand-color-main) 100%);
     --border-radius: 2vw;
     --box-shadow: #2020d8 0 10px 20px -10px;
+}
+
+ion-toast {
+    --max-height: 8vh;
 }
 

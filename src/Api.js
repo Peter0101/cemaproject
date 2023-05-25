@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-const uri = 'http://localhost:3000'
+const uri = 'http://192.168.0.18:3000'
 
 /**
  * Cadastra um novo usuário

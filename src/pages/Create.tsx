@@ -1,7 +1,7 @@
 // @ts-nocheck
 import {useState, useEffect} from 'react'
 import {useHistory} from 'react-router-dom'
-import { IonButton, IonContent, IonIcon, IonHeader, IonPage, IonTitle, IonToolbar, IonText, IonCardContent, IonCard, IonCheckbox, IonTextarea, IonGrid, IonRow, IonRadioGroup, IonRadio } from '@ionic/react';
+import { IonButton, IonContent, IonToast, IonIcon, IonHeader, IonPage, IonTitle, IonToolbar, IonText, IonCardContent, IonCard, IonCheckbox, IonTextarea, IonGrid, IonRow, IonRadioGroup, IonRadio } from '@ionic/react';
 import Header from '../components/Header';
 import './Create.css';
 import { send } from 'ionicons/icons';
@@ -11,7 +11,12 @@ import {connect, post} from '../Api.js'
 const Tab2: React.FC = () => {
   const [isAnonymous, setIsAnonymous] = useState(true)
   const [complaintBody, setComplaintBody] = useState('')
+  const [showToast, setShowToast] = useState(false)
+  const [toastMessage, setToastMessage] = useState('')
+  const [buttonHidden, setButtonHidden] = useState(false)
+
   const history = useHistory()
+
   useEffect(() => {
     connect((done, err) => {
       if(done) {
@@ -24,6 +29,7 @@ const Tab2: React.FC = () => {
   }, [])
 
   const sendComplaint = () => {
+    setButtonHidden(true)
     const data = {
       isAnonymous: isAnonymous,
       body: complaintBody
@@ -31,18 +37,33 @@ const Tab2: React.FC = () => {
 
     post('/create', data, (done, err) => {
       if(done) {
-        return
+        showAlert('Denúncia criada!')
+        setButtonHidden(false)
       }
       if(err) {
+        showAlert(err)
         console.log(err)
+        setButtonHidden(false)
       }
     })
+  }
+
+  const showAlert = (body) => {
+    setToastMessage(body.toString())
+    setShowToast(true)
   }
   return (
     <IonPage>
           <Header />
 
       <IonContent fullscreen>
+        <IonToast
+          isOpen={showToast}
+          message={toastMessage}
+          duration={2000}
+          onDidDismiss={() => {setShowToast(false)}}
+          position="top"
+        />
 
         <IonGrid>
           <IonRow className='ion-justify-content-center ion-padding'>
@@ -66,7 +87,7 @@ const Tab2: React.FC = () => {
             <IonTextarea value={complaintBody} onIonChange={e => {setComplaintBody(e.detail.value)}} className="textArea ion-margin-horizontal" placeholder="Escreva a sua denúncia" autoGrow={false}></IonTextarea>
           </IonRow>
           <IonRow className='ion-justify-content-center ion-padding-bottom'>
-            <IonButton onClick={sendComplaint} className='sendButton'>
+            <IonButton onClick={sendComplaint} disabled={buttonHidden} className='sendButton'>
               Enviar
             </IonButton>
           </IonRow>
