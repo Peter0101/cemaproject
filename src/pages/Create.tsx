@@ -13,7 +13,7 @@ const Tab2: React.FC = () => {
   const [complaintBody, setComplaintBody] = useState('')
   const [showToast, setShowToast] = useState(false)
   const [toastMessage, setToastMessage] = useState('')
-  const [buttonHidden, setButtonHidden] = useState(false)
+  const [buttonDisabled, setButtonDisabled] = useState(false)
 
   const history = useHistory()
 
@@ -29,7 +29,7 @@ const Tab2: React.FC = () => {
   }, [])
 
   const sendComplaint = () => {
-    setButtonHidden(true)
+    setButtonDisabled(true)
     const data = {
       isAnonymous: isAnonymous,
       body: complaintBody
@@ -38,12 +38,11 @@ const Tab2: React.FC = () => {
     post('/create', data, (done, err) => {
       if(done) {
         showAlert('Denúncia criada!')
-        setButtonHidden(false)
+        setButtonDisabled(false)
       }
       if(err) {
         showAlert(err)
-        console.log(err)
-        setButtonHidden(false)
+        setButtonDisabled(false)
       }
     })
   }
@@ -87,7 +86,7 @@ const Tab2: React.FC = () => {
             <IonTextarea value={complaintBody} onIonChange={e => {setComplaintBody(e.detail.value)}} className="textArea ion-margin-horizontal" placeholder="Escreva a sua denúncia" autoGrow={false}></IonTextarea>
           </IonRow>
           <IonRow className='ion-justify-content-center ion-padding-bottom'>
-            <IonButton onClick={sendComplaint} disabled={buttonHidden} className='sendButton'>
+            <IonButton onClick={sendComplaint} disabled={buttonDisabled} className='sendButton'>
               Enviar
             </IonButton>
           </IonRow>

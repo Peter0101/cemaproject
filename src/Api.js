@@ -54,7 +54,6 @@ function connect(done) {
             return done(true, null)
         }
     }).catch((err) => {
-        console.log(err)
         return done(false, err)
     })
 }

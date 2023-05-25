@@ -8,13 +8,15 @@ interface ContainerProps {
   status: string;
   identificador: string;
   data: string;
+  openBody: any;
 }
 
 function cardenuncia(props: ContainerProps) {
   return (
     <IonCard>
       <IonCardHeader className='header'>
-        <IonCardTitle>Denúncia #{props.identificador}</IonCardTitle>
+        <IonCardTitle>Denúncia</IonCardTitle>
+        <IonCardSubtitle>#{props.identificador}</IonCardSubtitle>
         <IonRow className="borda"/>
       </IonCardHeader>
       <IonCardContent className='ion-padding-horizontal'>
@@ -33,11 +35,10 @@ function cardenuncia(props: ContainerProps) {
               <IonText className='complaintDescription'>A sua denúncia foi enviada e logo entrará em análise</IonText>
             </IonCol>
             <IonCol className='seeButtonBox ion-no-padding'>
-              <IonButton fill='clear' size='small' id="readdenuncia" className='seeButton ion-no-padding'>
+              <IonButton fill='clear' size='small' onClick={() => {props.openBody()}} id="readdenuncia" className='seeButton ion-no-padding'>
                 <IonIcon slot='start' icon={chevronUpOutline} className='seeButtonIcon'/>
                 Ler denúncia
-                </IonButton>
-                
+              </IonButton>
             </IonCol>
           </IonRow>
         </IonGrid>

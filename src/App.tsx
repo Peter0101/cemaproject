@@ -10,7 +10,7 @@ import {
   setupIonicReact
 } from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
-import { notifications, alarm, home, warning, person, alertCircle } from 'ionicons/icons';
+import { notifications, alarm, home, warning, person, addCircle } from 'ionicons/icons';
 import Home from './pages/Home';
 import Create from './pages/Create';
 import History from './pages/History';
@@ -79,7 +79,7 @@ const App: React.FC = () => (
           </IonTabButton>
 
           <IonTabButton className="complaint" tab="create" href="/create">
-            <IonIcon className="complaintIcon" aria-hidden="true" icon={alertCircle}/>
+            <IonIcon className="complaintIcon" aria-hidden="true" icon={addCircle}/>
           </IonTabButton>
 
           <IonTabButton tab="notifications" href="/notifications">
